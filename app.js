@@ -7,10 +7,10 @@ var bodyParser = require('body-parser');
 
 var mongo=require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/cwb-step1');
+//var db = monk('localhost:27017/cwb-step1');
+console.log("MONGODB_URI is : " + process.env.MONGODB_URI);
 
-//var db = monk(process.env.DATABASE_URL);
-//console.log("DATABASE_URL is : " + process.env.DATABASE_URL);
+var db = monk(process.env.MONGODB_URI);
 
 var index = require('./routes/index');
 //var users = require('./routes/users');
