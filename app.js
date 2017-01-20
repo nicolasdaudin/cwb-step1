@@ -9,6 +9,9 @@ var mongo=require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/cwb-step1');
 
+//var db = monk(process.env.DATABASE_URL);
+//console.log("DATABASE_URL is : " + process.env.DATABASE_URL);
+
 var index = require('./routes/index');
 //var users = require('./routes/users');
 
